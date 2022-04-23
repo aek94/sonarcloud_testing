@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"aek94_sonarcloud_testing" /o:"aek94-sonarcloud-testing" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build ./EmployeeApp/EmployeeApp.ConsoleApp/EmployeeApp.ConsoleApp.sln
+          dotnet build ../EmployeeApp/EmployeeApp.ConsoleApp/EmployeeApp.ConsoleApp.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
